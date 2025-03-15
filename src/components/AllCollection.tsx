@@ -41,7 +41,7 @@ function AllCollection() {
           {/* Readers Section */}
           <div className="relative  rounded-2xl">
             <Image
-              src="https://i.ibb.co.com/JWvzTsYF/image.png"
+              src="https://i.ibb.co/JWvzTsYF/image.png"
               alt="Readers"
               className="w-full h-full object-top object-cover"
               width={500}
@@ -56,7 +56,7 @@ function AllCollection() {
           {/* Progressives Section */}
           <div className="relative  rounded-2xl">
             <Image
-              src="https://i.ibb.co.com/0yM0p9Xx/image.png"
+              src="https://i.ibb.co/0yM0p9Xx/image.png"
               alt="Progressives"
               className="w-full h-full object-cover"
               width={500}

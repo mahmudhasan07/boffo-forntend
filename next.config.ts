@@ -5,7 +5,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "api.boffo-global.com", // Replace with your actual backend domain
+        hostname: "api.boffo-global.com", // Keep this as is
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co", // Corrected domain
       },
     ],
   },
