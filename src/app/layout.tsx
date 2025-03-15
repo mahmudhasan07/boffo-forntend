@@ -19,11 +19,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Boffo",
-  description: "An E-commerce platform where you find you products",
-  icons : {
-    icon : logo.src
+  description: "An E-commerce platform where you find your products",
+  icons: {
+    icon: logo.src
+  },
+  openGraph: {
+    title: "Boffo",
+    description: "An E-commerce platform where you find your products",
+    images: [
+      {
+        url: logo.src, // Add the logo as the image
+        alt: "Boffo Logo", // Optional alt text for the image
+      }
+    ]
   }
 };
+
 
 export default function RootLayout({
   children,
