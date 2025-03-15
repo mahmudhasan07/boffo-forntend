@@ -168,7 +168,8 @@ const CheckoutPage = () => {
               </div>
             </div>
             <div>
-              <div>
+              <h1 className="text-lg font-semibold mb-3">Select your payment method</h1>
+              <div className="space-x-2">
                 <input
                   onChange={() => setPaymentType("CashIn")}
                   type="radio"
@@ -177,15 +178,25 @@ const CheckoutPage = () => {
                 />
                 <span>CashIn</span>
               </div>
-              {/* <div>
+              <div className="space-x-2">
                 <input
                   onChange={() => setPaymentType("Online Payment")}
                   type="radio"
                   name="paymentType"
+                  disabled
                   className="text-xl"
                 />
                 <span>Online Payment</span>
-              </div> */}
+              </div>
+
+              <div>
+                {
+                  user?.email ?
+                  ""
+                  :
+                  <span className="text-red-600 text-sm">If you don&apos;t login and purchase products as a gust user, there will no order history. Only admin see those information and he will contact you</span>
+                }
+              </div>
             </div>
           </div>
 

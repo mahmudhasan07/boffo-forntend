@@ -117,12 +117,18 @@ import { useSearchParams } from "next/navigation";
 // ]
 function Page() {
   const searchParams = useSearchParams();
-  const search = searchParams.get("search")
+  const search = searchParams.get("search");
+  const feature = searchParams.get("isFeature");
   const filters = [...searchParams.keys()];
   console.log(search);
 
   const { products2, error, isLoading } = useGetProductsQuery(
-    { gender: filters[0], category: filters[1], search: search },
+    {
+      gender: filters[0],
+      category: filters[1],
+      search: search,
+      isFeature: feature,
+    },
     {
       selectFromResult: ({ data, error, isLoading }) => ({
         products2: data?.data,

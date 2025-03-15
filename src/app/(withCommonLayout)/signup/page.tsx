@@ -4,7 +4,7 @@
 import { useSignupMutation } from "@/redux/api/user/userApi";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import * as z from "zod";
@@ -34,7 +34,7 @@ const formSchema = z.object({
 
 export default function SignupForm() {
     const [signup, { isLoading }] = useSignupMutation(); // RTK Query Hook
-    const router = useRouter()
+    // const router = useRouter()
     const {
         handleSubmit,
         register,
@@ -59,7 +59,8 @@ export default function SignupForm() {
             if (response?.data) {
                 toast.success(response.message);
                 localStorage.setItem("email", response?.data.email)
-                router.push("/otp")
+                toast.success("Register is completed, go to login page")
+                // router.push("/otp")
             }
 
         } catch (err: any) {

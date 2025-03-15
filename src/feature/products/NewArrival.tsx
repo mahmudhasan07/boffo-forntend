@@ -19,7 +19,7 @@ const NewArrival = () => {
   );
 
   return (
-    <div className="container section-gap">
+    <div className="container section-gap"> 
       <div className="">
         <div className="flex flex-row items-center justify-between mb-12">
           <div className="mb-8 lg:mb-0">
@@ -29,8 +29,8 @@ const NewArrival = () => {
             <div className="h-1 w-20 bg-gray-900 rounded" />
           </div>
           <Link
-            href={"/products"}
-            className="inline-flex items-center sm:px-6 px-3 py-2 sm:py-3 border border-gray-900 text-base font-medium rounded-full text-gray-900 bg-transparent hover:bg-primary hover:border-primary hover:text-white transition-colors duration-200"
+            href={"/products?isFeature=true"}
+            className="inline-flex items-center sm:px-6 px-3 py-2 sm:py-3 border border-gray-900 text-base font-medium rounded-full text-gray-900 bg-transparent hover:bg-primary hover:border-primary hover:text-white transition-colors duration-200 "
           >
             View All Collections
           </Link>

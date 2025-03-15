@@ -270,13 +270,13 @@ export default function Navbar() {
               href="/sale"
               className="block py-2 text-gray-700 font-semibold"
             >
-              Sale
+              SALE
             </Link>
             <Link
               href="/contact"
               className="block py-2 text-gray-700 font-semibold"
             >
-              Contacts
+              CONTACTS
             </Link>
           </nav>
         </div>
