@@ -61,6 +61,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                         height={400}
                         className="absolute inset-0 object-cover w-full h-full transition-opacity duration-500 ease-in-out"
                         style={{ opacity: isHovered ? 0 : 1 }}
+                        priority
+                        quality={75} 
                     />
                     {/* Second Image */}
                     <Image
