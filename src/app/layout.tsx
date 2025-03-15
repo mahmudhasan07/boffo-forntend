@@ -6,6 +6,7 @@ import CartDrawer from "@/feature/cart/CartDrawer";
 import SmoothScrolling from "@/components/SmoothScroll";
 import { Toaster } from "@/components/ui/sonner";
 import logo from "@/assets/logo.png";
+import title from "@/assets/title.jpg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     description: "An E-commerce platform where you find your products",
     images: [
       {
-        url: logo.src, // Add the logo as the image
+        url: title.src, // Add the logo as the image
         alt: "Boffo Logo", // Optional alt text for the image
       }
     ]
