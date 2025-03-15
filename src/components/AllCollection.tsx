@@ -2,6 +2,8 @@
 import React from "react";
 import { ShoppingBag } from "lucide-react";
 import panjabiCollection from "@/assets/banner1.jpg";
+import polo from "@/assets/polo.jpg"
+import shirt from "@/assets/shirt.jpg"
 // import acc from "@/assets/dynamic/ssss(1).jpg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -41,7 +43,7 @@ function AllCollection() {
           {/* Readers Section */}
           <div className="relative  rounded-2xl">
             <Image
-              src="https://i.ibb.co/JWvzTsYF/image.png"
+              src={polo}
               alt="Readers"
               className="w-full h-full object-top object-cover"
               width={500}
@@ -56,7 +58,7 @@ function AllCollection() {
           {/* Progressives Section */}
           <div className="relative  rounded-2xl">
             <Image
-              src="https://i.ibb.co/0yM0p9Xx/image.png"
+              src={shirt}
               alt="Progressives"
               className="w-full h-full object-cover"
               width={500}
