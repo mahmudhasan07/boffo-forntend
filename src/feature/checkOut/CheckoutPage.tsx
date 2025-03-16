@@ -176,7 +176,7 @@ const CheckoutPage = () => {
                   name="paymentType"
                   className="text-xl"
                 />
-                <span>CashIn</span>
+                <span>Cash On Delivery</span>
               </div>
               <div className="space-x-2">
                 <input
@@ -194,7 +194,7 @@ const CheckoutPage = () => {
                   user?.email ?
                   ""
                   :
-                  <span className="text-red-600 text-sm">If you don&apos;t login and purchase products as a gust user, there will no order history. Only admin see those information and he will contact you</span>
+                  <span className="text-red-600 text-sm">If you don&apos;t log in and purchase products as a guest user, there will be no order history. Only the admin sees that information and he will contact you.</span>
                 }
               </div>
             </div>

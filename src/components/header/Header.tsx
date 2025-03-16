@@ -6,6 +6,7 @@ import CartIcon from "@/feature/cart/CartIcon";
 import { useFormattedCategories } from "@/hooks/useFormatedCategory";
 import { cn } from "@/lib/utils";
 import { RootState } from "@/redux/store";
+import image from "@/assets/banner2.jpg";
 
 import logo from "@/assets/logo.png";
 import {
@@ -326,16 +327,16 @@ export function getCategoryContent(
               className="group "
             >
               <img
-                src={category.featured.image}
+                src={image.src as string}
                 alt={category.featured.title}
                 className="w-[300px] h-[300px] object-cover transform group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-opacity" />
               <div className="absolute bottom-4 left-4 right-4">
                 <h3 className="text-white font-bold text-lg">
-                  {category.featured.title}
+                  Men Eid Collection
                 </h3>
-                <p className="text-white text-sm mt-1">Shop Now →</p>
+                <Link href={"/products?male&panjabi"} className="text-white text-sm mt-1">Shop Now →</Link>
               </div>
             </Link>
           </div>

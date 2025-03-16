@@ -103,8 +103,8 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 {/* Product Info */}
                 <div className="mt-4 space-y-2">
-                    <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
                     <p className="text-sm text-gray-500">{product.category}</p>
+                    <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
                     <p className="text-lg font-semibold">BDT {product.price.toFixed(2)} TK</p>
                 </div>
             </div>
