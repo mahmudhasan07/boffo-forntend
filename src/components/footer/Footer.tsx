@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const menuItems = [
-    { name: "Billing & Payments", path: "/billing-payments" },
-    { name: "Shipping & Delivery", path: "/shipping-delivery" },
+    { name: "Payments & Delivery", path: "/payment-delivery" },
+    // { name: "Shipping & Delivery", path: "/shipping-delivery" },
     { name: "Contact", path: "/contact" },
     { name: "Return & Exchanges", path: "/return-exchanges" }
   ];
@@ -74,7 +74,7 @@ export default function Footer() {
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <Link
-                    href={`/${item.path}`}
+                    href={`${item.path}`}
                     className="text-sm text-gray-600 hover:text-primary"
                   >
                     {item.name}
@@ -121,12 +121,12 @@ export default function Footer() {
               >
                 Terms of Use
               </Link>
-              <Link
+              {/* <Link
                 href="/offer-terms"
                 className="text-sm text-gray-600 hover:text-primary"
               >
                 Offer Terms
-              </Link>
+              </Link> */}
             </div>
             <p className="text-sm text-gray-600">
               © {new Date().getFullYear()} boffo All rights reserved.
