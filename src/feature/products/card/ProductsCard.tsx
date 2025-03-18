@@ -49,7 +49,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     };
 
     return (
-        <div onClick={(event) => handleDetails(event, product.id)}>
+        <div onClick={(event) => handleDetails(event, product.id)} className="cursor-pointer">
             <div className="group relative" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                 {/* Product Image */}
                 <div className="relative aspect-square overflow-hidden bg-gray-100 rounded-sm transition-all duration-300" >
@@ -105,7 +105,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div className="mt-4 space-y-2">
                     <p className="text-sm text-gray-500">{product.category}</p>
                     <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
-                    <p className="text-lg font-semibold">BDT {product.price.toFixed(2)} TK</p>
+                    {/* <p className="text-lg font-semibold">BDT {product.price.toFixed(2)} TK</p> */}
+                    <p className='text-lg font-semibold'>BDT <span className={`${product?.discount > 0 ? "line-through text-gray-400 text-base" : "text-color"}`}>{product?.price}</span> <span className={`${product?.discount > 0 ? "text-gray-500-600" : "hidden"}`}>{product?.discount}</span> TK</p>
                 </div>
             </div>
 

@@ -8,7 +8,7 @@ import { useGetProductsQuery } from "@/redux/api/products/productsApi";
 
 const NewArrival = () => {
   const { products2, error, isLoading } = useGetProductsQuery(
-    { isFeature: true },
+    { isFeature: true, limit:100 },
     {
       selectFromResult: ({ data, error, isLoading }) => ({
         products2: data?.data,
@@ -58,7 +58,7 @@ const NewArrival = () => {
         {!isLoading && !error && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-10">
             {products2?.length > 0 ? (
-              products2?.map((product: any) => (
+              products2?.slice(0, 4).map((product: any) => (
                 <ProductCard key={product.id} product={product} />
               ))
             ) : (

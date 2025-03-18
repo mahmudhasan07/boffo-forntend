@@ -128,6 +128,7 @@ function Page() {
       category: filters[1],
       search: search,
       isFeature: feature,
+      limit: 100
     },
     {
       selectFromResult: ({ data, error, isLoading }) => ({
