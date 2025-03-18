@@ -16,6 +16,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 const Banner = () => {
   // Fake data simulating API response
@@ -24,6 +25,7 @@ const Banner = () => {
       title:
         "Embrace Tradition with Our Elegant and Stylish Premium Panjabi Collection.",
       imageUrl: slide1.src,
+      path : "products?male&panjabi"
     },
     {
       title:
@@ -78,13 +80,13 @@ const Banner = () => {
                     <h2 className="mb-6 md:text-4xl text-2xl lg:text-6xl font-bold leading-tight text-white">
                       {slide.title} {/* Dynamically set title */}
                     </h2>
-                    <a
+                    <Link
                       href="#"
                       className="inline-flex items-center gap-2 rounded-full bg-primary/80 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary"
                     >
                       Shop now
                       <ArrowRight className="h-4 w-4" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -97,9 +99,8 @@ const Banner = () => {
           <button
             key={idx}
             onClick={() => swiperInstance?.slideTo(idx)}
-            className={`w-3 h-3 mx-1 rounded-full transition-all duration-300 ${
-              currentImage === idx ? "bg-primary" : "bg-gray-300"
-            }`}
+            className={`w-3 h-3 mx-1 rounded-full transition-all duration-300 ${currentImage === idx ? "bg-primary" : "bg-gray-300"
+              }`}
           />
         ))}
       </div>
