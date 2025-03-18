@@ -64,7 +64,7 @@ export default function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [dispatch, token]);
 
   const handleCategoryHover = (category: string | null) => {
     setActiveCategory(category);
