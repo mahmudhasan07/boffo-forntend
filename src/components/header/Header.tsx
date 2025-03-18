@@ -50,8 +50,8 @@ export default function Navbar() {
     if (tokenDetails != undefined && tokenDetails.exp && tokenDetails.exp > currentTime) {
 
     } else {
-        dispatch(logout())
-        Cookies?.remove("token")
+      dispatch(logout())
+      Cookies?.remove("token")
     }
 
     function handleClickOutside(event: MouseEvent) {
@@ -166,18 +166,18 @@ export default function Navbar() {
               {isLoading
                 ? "loading.."
                 : categories?.map((category: any) => (
-                    <div
-                      key={category.id}
-                      className="relative "
-                      onClick={() => handleCategoryHover(category.id)}
-                      onMouseEnter={() => handleCategoryHover(category.id)}
-                      onMouseLeave={() => handleCategoryHover(null)}
-                    >
-                      <button className="text-gray-700 hover:text-primary font-medium">
-                        {category.name}
-                      </button>
-                    </div>
-                  ))}
+                  <div
+                    key={category.id}
+                    className="relative "
+                    onClick={() => handleCategoryHover(category.id)}
+                    onMouseEnter={() => handleCategoryHover(category.id)}
+                    onMouseLeave={() => handleCategoryHover(null)}
+                  >
+                    <button className="text-gray-700 hover:text-primary font-medium">
+                      {category.name}
+                    </button>
+                  </div>
+                ))}
             </div>
           </div>
         </div>

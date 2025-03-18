@@ -31,17 +31,20 @@ const Banner = () => {
       title:
         "Cherish Tradition with Our Sophisticated and Stylish Luxury Panjabi Collection.",
       imageUrl: slide2.src,
+        path : "products?male&panjabi"
     },
 
     {
       title:
         "Appreciate The Tradition With Our Sophisticated And Fashionable Premium Trading Panjabi Collection.",
       imageUrl: slide3.src,
+        path : "products?male&panjabi"
     },
     {
       title:
         "Cherish Tradition with Our Sophisticated and Stylish Luxury Panjabi Collection.",
       imageUrl: slide4.src,
+        path : "products?male&panjabi"
     },
   ];
 
@@ -81,7 +84,7 @@ const Banner = () => {
                       {slide.title} {/* Dynamically set title */}
                     </h2>
                     <Link
-                      href="#"
+                      href={slide.path}
                       className="inline-flex items-center gap-2 rounded-full bg-primary/80 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary"
                     >
                       Shop now
