@@ -18,10 +18,10 @@ const SuccessPayment = () => {
       <div className="bg-white shadow-md rounded-lg p-8 text-center">
         <CheckCircle className="text-green-500 w-16 h-16 mx-auto" />
         <h1 className="text-2xl font-bold text-gray-900 mt-4">
-          Payment Successful!
+        Your Order is Confirmed
         </h1>
         <p className="text-gray-600 mt-2">
-          Thank you for your purchase. Your payment has been processed
+          Thank you for your purchase. Your Order has been processed
           successfully.
         </p>
         <Button className="mt-6" onClick={() => router.push("/")}>

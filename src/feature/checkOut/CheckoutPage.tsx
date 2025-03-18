@@ -23,7 +23,7 @@ const CheckoutPage = () => {
   const [paymentFn] = useMakePaymentMutation();
   const [cashPayment] = useCashPaymentMutation();
   const [paymentType, setPaymentType] = useState<string>("");
-  const [payment, setPayment] = useState<string>("Proceed to Payment");
+  const [payment, setPayment] = useState<string>("Click to order");
   const { cart } = useSelector((state: RootState) => state.cart);
   // const { email: userEmail } = useSelector((state: RootState) => state.auth);
   const route = useRouter();
@@ -47,10 +47,12 @@ const CheckoutPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     setPayment("loading");
-    toast.loading("wait for some while, payment is processing");
+    if (paymentType == "Online Payment") {
+      toast.loading("wait for some while, payment is processing");
+    }
     e.preventDefault();
     // Implement checkout submission logic (e.g., API call, payment integration)
-    console.log("Checkout submitted");
+
     const value = new FormData(e.currentTarget as HTMLFormElement);
     const name = `${value.get("firstName")} ${value.get("lastName")}`;
     const email = value.get("email");
@@ -88,8 +90,8 @@ const CheckoutPage = () => {
         toast.error("Unable to make payment, try again");
         return;
       }
-      toast.dismiss("Product Successfully purchased");
-      setPayment("Proceed to Payment");
+      toast.dismiss("Your order is confirmed");
+      setPayment("Click to order");
       route.push("/success");
 
       // toast.warning("Please login first for purchase");
@@ -134,7 +136,7 @@ const CheckoutPage = () => {
                     <p className="text-sm text-gray-500">
                       Quantity: {item.quantity}
                     </p>
-                    <p className="font-medium mt-1">${item.price.toFixed(2)}</p>
+                    <p className="font-medium mt-1">tk.{item.price.toFixed(2)}</p>
                   </div>
                   <Button
                     variant="ghost"
@@ -156,7 +158,7 @@ const CheckoutPage = () => {
               </div>
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="font-medium">${subtotal.toFixed(2)}</span>
+                <span className="font-medium">tk.{subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
                 <span>Shipping</span>
@@ -164,7 +166,7 @@ const CheckoutPage = () => {
               </div>
               <div className="flex justify-between text-lg font-bold pt-2 border-t">
                 <span>Total</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>tk.{subtotal.toFixed(2)}</span>
               </div>
             </div>
             <div>

@@ -46,7 +46,7 @@ const ProductDetails = () => {
             size: selectedSize
         }));
 
-        toast.success("Product successfully add to cart")
+        toast.success("Product successfully added to cart. Please click on cart to confirm your order.")
     };
 
     // const handleBuyNow = async () => {
