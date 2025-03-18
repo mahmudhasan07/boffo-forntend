@@ -323,7 +323,7 @@ export function getCategoryContent(
         <div ref={ref} className="col-span-1">
           <div className=" rounded-lg overflow-hidden relative">
             <Link
-              href={`/products?${category.slug}&${category.featured.href}`}
+              href={`/products?male&panjabi`}
               className="group "
             >
               <img
