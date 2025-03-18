@@ -2,8 +2,9 @@
 import React from "react";
 import { ShoppingBag } from "lucide-react";
 import panjabiCollection from "@/assets/banner1.jpg";
-import polo from "@/assets/polo.jpg"
-import shirt from "@/assets/shirt.jpg"
+// import polo from "@/assets/polo.jpg"
+import dropShoulder from "@/assets/drop shoulder.jpg"
+import shacket from "@/assets/shacket.jpg"
 // import acc from "@/assets/dynamic/ssss(1).jpg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -11,7 +12,7 @@ function AllCollection() {
   const route = useRouter();
   return (
     <div className="bg-gray-50 container section-gap">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-h-[600px]">
         {/* Left Featured Section */}
         <div className="relative rounded-2xl">
           <Image
@@ -43,30 +44,30 @@ function AllCollection() {
           {/* Readers Section */}
           <div className="relative  rounded-2xl">
             <Image
-              src={polo}
+              src={dropShoulder}
               alt="Readers"
-              className="w-full h-full object-top object-cover"
+              className="w-full h-[600px] object-top object-cover"
               width={500}
               height={500}
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
             <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
-              POLO
+              Drop Shoulder
             </h3>
           </div>
 
           {/* Progressives Section */}
           <div className="relative  rounded-2xl">
             <Image
-              src={shirt}
+              src={shacket}
               alt="Progressives"
-              className="w-full h-full object-cover"
+              className="w-full h-[600px] object-cover"
               width={500}
               height={500}
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
             <h3 className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
-              SHIRT
+              Shacket
             </h3>
           </div>
 
