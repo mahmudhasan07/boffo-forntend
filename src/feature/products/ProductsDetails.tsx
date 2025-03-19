@@ -40,7 +40,7 @@ const ProductDetails = () => {
         dispatch(addToCart({
             id: product.data.id, // Use `data.id` here
             title: product.data.name, // Use `prodcut.data.name`
-            price: product.data.price,
+            price: product.data.discount ? product.data.discount : product.data.price ,
             quantity: quantity,
             image: product.data.thumbnailImage, // Use `data.thumbnailImage`
             size: selectedSize

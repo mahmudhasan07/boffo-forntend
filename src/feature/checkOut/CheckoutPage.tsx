@@ -213,7 +213,7 @@ const CheckoutPage = () => {
                     className="px-1"
                     id="firstName"
                     name="firstName"
-                    placeholder="John"
+                    placeholder=""
                     required
                   />
                 </div>
@@ -224,7 +224,7 @@ const CheckoutPage = () => {
                   className="px-1"
                   id="address"
                   name="address"
-                  placeholder="123 Main St"
+                  placeholder=""
                   required
                 />
               </div>
@@ -235,7 +235,7 @@ const CheckoutPage = () => {
                     className="px-1"
                     id="city"
                     name="city"
-                    placeholder="New York"
+                    placeholder=""
                     required
                   />
                 </div>
@@ -245,7 +245,7 @@ const CheckoutPage = () => {
                     className="px-1"
                     id="postalCode"
                     name="postalCode"
-                    placeholder="10001"
+                    placeholder=""
                     required
                   />
                 </div>
@@ -255,7 +255,7 @@ const CheckoutPage = () => {
                     className="px-1"
                     id="thana"
                     name="thana"
-                    placeholder="Motijheel"
+                    placeholder=""
                     required
                   />
                 </div>
@@ -267,7 +267,7 @@ const CheckoutPage = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="john@example.com"
+                  placeholder=""
                   required
                 />
               </div>
@@ -280,7 +280,7 @@ const CheckoutPage = () => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="(123) 456-7890"
+                  placeholder=""
                   required
                 />
               </div>
