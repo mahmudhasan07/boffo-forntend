@@ -96,7 +96,7 @@ const ProductDetails = () => {
                         <div className="flex justify-between items-start">
                             <div>
                                 <h1 className="text-3xl font-bold text-gray-900">{product?.data.name}</h1>  {/* Use `data.name` */}
-                                <p className="mt-2 text-gray-500">{product?.data.description}</p>  {/* Use `data.description` */}
+                                {/* <p className="mt-2 text-gray-500">{product?.data.description}</p>  Use `data.description` */}
                             </div>
                             <Button
                                 variant="ghost"
@@ -114,18 +114,22 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="pt-4 border-t">
-                            <p className="text-3xl font-bold text-gray-900">tk.{product?.data.price}</p>  {/* Use `data.price` */}
+                        <p className='text-lg font-semibold'>BDT <span className={`${product?.data?.discount > 0 ? "line-through text-gray-400 text-base" : "text-color"}`}>{product?.data?.price}</span> <span className={`${product?.data?.discount > 0 ? "text-gray-500-600" : "hidden"}`}>{product?.data?.discount}</span> TK</p>  {/* Use `data.price` */}
                         </div>
 
                         {/* Product Specifications */}
-                        <div className="grid grid-cols-2 gap-4 pt-4 border-t">
+                        <div className="grid grid-cols-2 gap-2 pt-4 border-t">
                             <div>
                                 <h4 className="font-medium text-gray-900">Color</h4>
                                 <p className="text-gray-500">{product?.data.color}</p>  {/* Use `data.color` */}
                             </div>
                             <div>
                                 <h4 className="font-medium text-gray-900">Fabric</h4>
-                                <p className="text-gray-500">{product?.data.description}</p>  {/* Use `data.description` */}
+                                {
+                                    product?.data.description.split("\n").map((line : any, idx : number)=>
+                                        <p key={idx} className="text-gray-500">{line}</p>
+                                    )
+                                }
                             </div>
                         </div>
 
@@ -141,7 +145,7 @@ const ProductDetails = () => {
                                             setSelectedSize(size);
                                             setIsSize(false);
                                         }}
-                                        className="h-11 w-11"
+                                        className="h-11 w-14 "
                                     >
                                         {size}
                                     </Button>
