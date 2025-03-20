@@ -7,6 +7,7 @@ import SmoothScrolling from "@/components/SmoothScroll";
 import { Toaster } from "@/components/ui/sonner";
 import logo from "@/assets/logo.png";
 import title from "@/assets/title.jpg";
+import FacebookPixel from "@/components/FacebookPixel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,6 +51,7 @@ export default function RootLayout({
         <SmoothScrolling>
           <ReduxProvider>
             <CartDrawer />
+            <FacebookPixel /> {/* Add Facebook Pixel component */}
             {children}
             <Toaster />
           </ReduxProvider>

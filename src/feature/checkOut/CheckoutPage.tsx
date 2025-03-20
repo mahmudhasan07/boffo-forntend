@@ -17,6 +17,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
+import { event } from "@/lib/facebookPixel";
 
 const CheckoutPage = () => {
   const dispatch = useDispatch();
@@ -79,9 +80,15 @@ const CheckoutPage = () => {
       const { error, data } = await paymentFn(body);
       if (error) {
         toast.error("Unable to make payment, try again");
-        toast.success("Product Successfully purchased");
         return;
       }
+
+      event("Purchase", {
+        value: subtotal.toFixed(2),
+        currency: "BDT",
+        content_ids: cart.map((item) => item.id),
+        content_type: "product",
+      });
 
       route.push(data?.data?.redirectLink);
     } else {
@@ -90,6 +97,14 @@ const CheckoutPage = () => {
         toast.error("Unable to make payment, try again");
         return;
       }
+
+      event("Purchase", {
+        value: subtotal.toFixed(2),
+        currency: "BDT",
+        content_ids: cart.map((item) => item.id),
+        content_type: "product",
+      });
+
       toast.dismiss("Your order is confirmed");
       setPayment("Click to order");
       route.push("/success");
