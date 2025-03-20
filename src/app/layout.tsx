@@ -1,4 +1,4 @@
-// import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/redux/Provider";
@@ -17,22 +17,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata: Metadata = {
-//   title: "Boffo",
-//   description: "An E-commerce platform where you find your products",
-//   metadataBase: new URL("https://boffo-global.com"), // Set correct domain
-//   icons: {
-//     icon: "https://res.cloudinary.com/daudgshta/image/upload/v1742486791/Boffo/logo_nn4hxi.png",
-//   },
-//   openGraph: {
-//     images: [
-//       {
-//         url: "https://res.cloudinary.com/daudgshta/image/upload/v1742486812/Boffo/titleImage_jddtvo.png", // Add the logo as the image
-//         alt: "Boffo Logo", // Optional alt text for the image
-//       },
-//     ],
-//   },
-// };
+export const metadata: Metadata = {
+  title: "Boffo",
+  description: "An E-commerce platform where you find your products",
+  metadataBase: new URL("https://boffo-global.com"), // Set correct domain
+  icons: {
+    icon: "https://res.cloudinary.com/daudgshta/image/upload/v1742486791/Boffo/logo_nn4hxi.png",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://res.cloudinary.com/daudgshta/image/upload/v1742486812/Boffo/titleImage_jddtvo.png", // Add the logo as the image
+        alt: "Boffo Logo", // Optional alt text for the image
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
