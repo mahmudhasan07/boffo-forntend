@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Boffo",
   description: "An E-commerce platform where you find your products",
   metadataBase: new URL("https://boffo-global.com"), // Set correct domain
+  keywords : ["boffo", "boffo global", "boffo e-commerce"],
   icons: {
     icon: "https://res.cloudinary.com/daudgshta/image/upload/v1742486791/Boffo/logo_nn4hxi.png",
   },
@@ -33,7 +34,6 @@ export const metadata: Metadata = {
     ],
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
