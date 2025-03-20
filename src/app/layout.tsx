@@ -5,8 +5,6 @@ import ReduxProvider from "@/redux/Provider";
 import CartDrawer from "@/feature/cart/CartDrawer";
 import SmoothScrolling from "@/components/SmoothScroll";
 import { Toaster } from "@/components/ui/sonner";
-import logo from "../../public/logo.png";
-import title from "../../public/titleImage.png";
 import FacebookPixel from "@/components/FacebookPixel";
 
 const geistSans = Geist({
@@ -24,14 +22,12 @@ export const metadata: Metadata = {
   description: "An E-commerce platform where you find your products",
   metadataBase: new URL("https://boffo-global.com"), // Set correct domain
   icons: {
-    icon: logo.src,
+    icon: "https://res.cloudinary.com/daudgshta/image/upload/v1742486791/Boffo/logo_nn4hxi.png",
   },
   openGraph: {
-    title: "Boffo",
-    description: "An E-commerce platform where you find your products",
     images: [
       {
-        url: title.src, // Add the logo as the image
+        url: "https://res.cloudinary.com/daudgshta/image/upload/v1742486812/Boffo/titleImage_jddtvo.png", // Add the logo as the image
         alt: "Boffo Logo", // Optional alt text for the image
       },
     ],
