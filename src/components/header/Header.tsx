@@ -176,7 +176,7 @@ export default function Navbar() {
                       onMouseLeave={() => handleCategoryHover(null)}
                     >
                       <button className="text-gray-700 hover:text-primary font-medium">
-                        {category.name} Collection
+                        {category.name}
                       </button>
                     </div>
                   ))}

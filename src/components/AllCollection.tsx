@@ -12,9 +12,9 @@ function AllCollection() {
   const route = useRouter();
   return (
     <div className="bg-gray-50 container section-gap">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-h-[600px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
         {/* Left Featured Section */}
-        <div className="relative rounded-2xl">
+        <div className="relative rounded-2xl ">
           <Image
             src={panjabiCollection}
             alt="Spring Collection"
@@ -40,9 +40,9 @@ function AllCollection() {
         </div>
 
         {/* Right Grid Section */}
-        <div className="grid grid-cols-2 col-span-2 w-full border-2 gap-4">
+        <div className="grid md:grid-cols-2 col-span-2 w-full border-2 gap-4 relative">
           {/* Readers Section */}
-          <div className="relative  rounded-2xl">
+          <div className="relative rounded-2xl"  onClick={() => route.push("/products?male&drop-shoulder-t-shirt")}>
             <Image
               src={dropShoulder}
               alt="Readers"
@@ -57,7 +57,7 @@ function AllCollection() {
           </div>
 
           {/* Progressives Section */}
-          <div className="relative  rounded-2xl">
+          <div className="relative  rounded-2xl"  onClick={() => route.push("/products?male&shacket")}>
             <Image
               src={shacket}
               alt="Progressives"
