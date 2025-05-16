@@ -35,23 +35,25 @@ export default function Navbar() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [search, setSearch] = useState<string>("");
   const token = Cookies.get("token");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const { data: categories, isLoading } = useFormattedCategories();
 
   const ref = useRef<any>(null);
 
   useEffect(() => {
-
     const tokenDetails = token ? jwtDecode(token as string) : null;
 
     const currentTime = Math.floor(Date.now() / 1000);
     // Check if the token is expired
-    if (tokenDetails != undefined && tokenDetails.exp && tokenDetails.exp > currentTime) {
-
+    if (
+      tokenDetails != undefined &&
+      tokenDetails.exp &&
+      tokenDetails.exp > currentTime
+    ) {
     } else {
-      dispatch(logout())
-      Cookies?.remove("token")
+      dispatch(logout());
+      Cookies?.remove("token");
     }
 
     function handleClickOutside(event: MouseEvent) {
@@ -166,18 +168,18 @@ export default function Navbar() {
               {isLoading
                 ? "loading.."
                 : categories?.map((category: any) => (
-                  <div
-                    key={category.id}
-                    className="relative "
-                    onClick={() => handleCategoryHover(category.id)}
-                    onMouseEnter={() => handleCategoryHover(category.id)}
-                    onMouseLeave={() => handleCategoryHover(null)}
-                  >
-                    <button className="text-gray-700 hover:text-primary font-medium">
-                      {category.name}
-                    </button>
-                  </div>
-                ))}
+                    <div
+                      key={category.id}
+                      className="relative "
+                      onClick={() => handleCategoryHover(category.id)}
+                      onMouseEnter={() => handleCategoryHover(category.id)}
+                      onMouseLeave={() => handleCategoryHover(null)}
+                    >
+                      <button className="text-gray-700 hover:text-primary font-medium">
+                        {category.name} Collection
+                      </button>
+                    </div>
+                  ))}
             </div>
           </div>
         </div>
@@ -230,7 +232,7 @@ export default function Navbar() {
                 key={category.id}
                 className="border-b border-gray-100 last:border-0"
               >
-                <div className="flex items-center justify-between py-3">
+                <div className="flex items-center justify-between py-3 ">
                   <button
                     onClick={() => toggleCategory(category.id)}
                     className="text-gray-900 font-medium text-base text-start flex-1"
@@ -322,10 +324,7 @@ export function getCategoryContent(
       {category.featured && (
         <div ref={ref} className="col-span-1">
           <div className=" rounded-lg overflow-hidden relative">
-            <Link
-              href={`/products?male&panjabi`}
-              className="group "
-            >
+            <Link href={`/products?male&panjabi`} className="group ">
               <img
                 src={image.src as string}
                 alt={category.featured.title}
@@ -336,7 +335,9 @@ export function getCategoryContent(
                 <h3 className="text-white font-bold text-lg">
                   Men Eid Collection
                 </h3>
-                <Link href={"/products?male&panjabi"} className="text-white text-sm mt-1">Shop Now →</Link>
+                <span className="text-white text-sm mt-1 cursor-pointer">
+                  Shop Now →
+                </span>
               </div>
             </Link>
           </div>
